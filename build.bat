@@ -1,7 +1,11 @@
-clear
+cls
 
-g++ -fpermissive -I ./ -I ./include/SFML/include -c src/main.cpp -o ./build/main.o
+x86_64-w64-mingw32-g++ -c src/main.cpp -o ./build/main.o
 
-ld --force-exe-suffix -r ./build/main.o -o ./build/sim.exe
+ld -r build/main.o -o build/main.exe
 
-.\build\sim.exe
+cd build
+
+.\main.exe
+
+cd ../
